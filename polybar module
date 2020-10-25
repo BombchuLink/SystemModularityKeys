@@ -1,0 +1,10 @@
+[module/keymode]
+type = custom/ipc
+lable-active = %token%
+lable-active-font = 4
+hook-0 = if test -f ~/.config/scripts/keysmirrored; then echo "%{T}MIRROR"; elif test -f ~/.config/scripts/keyshot; then echo "HOTKEY"; else echo "%{T}NORMAL"; fi
+format-background = ${colors.magenta}
+format-foreground = ${colors.black}
+format-padding = 1
+initial = 1
+
